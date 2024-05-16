@@ -40,8 +40,4 @@ const ApplyForJob = async (req, res) => {
     }
 }
 
-
-
-
-
 module.exports = { ApplyForJob }

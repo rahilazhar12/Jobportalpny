@@ -30,6 +30,10 @@ app.use(morgan('dev'));
 
 app.use("/uploads", express.static("./uploads"));
 
+app.get('/get', (req, res) => {
+    return res.send('Hellow World')
+})
+
 
 app.use("/api/v1/jobs", jobsRouterCollection)
 app.use("/api/v1/users", userrouter)
