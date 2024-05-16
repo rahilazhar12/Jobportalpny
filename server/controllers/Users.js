@@ -107,7 +107,7 @@ const UserRegistration = async (req, res) => {
 }
 
 
-const GetUsers = async (req , res) => {
+const GetUsers = async (req, res) => {
 
 }
 
@@ -330,4 +330,4 @@ const updateProfile = async (req, res) => {
 
 
 
-module.exports = { UserRegistration, UserLogin, Profileregister, Getprofile, updateProfile , GetUsers }
+module.exports = { UserRegistration, UserLogin, Profileregister, Getprofile, updateProfile, GetUsers }
