@@ -31,6 +31,7 @@ const UserLogin = () => {
             alert(data.Message);
             sessionStorage.setItem('user' , JSON.stringify(data))
             navigate('/users')
+            window.location.reload()
             // Optionally reset form or redirect user
           } else {
             // Handle errors, e.g., display an error message
