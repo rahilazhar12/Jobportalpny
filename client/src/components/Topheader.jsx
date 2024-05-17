@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { FiLogIn, FiLogOut } from 'react-icons/fi';
 import { ImProfile } from 'react-icons/im';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 
 const Topheader = () => {
   const user = sessionStorage.getItem('user')
+  const navigate = useNavigate()
+
+
+  const Logouthandler = () => {
+    sessionStorage.clear('user')
+    navigate('/login')
+    window.location.reload()
+  }
 
   return (
     <div>
@@ -57,7 +66,7 @@ const Topheader = () => {
               </li>
             </Link>
            
-              <button  className="text-sm text-white">
+              <button onClick={Logouthandler}  className="text-sm text-white">
                 <span className="text-sm flex gap-2 items-center hover:text-yellow-300">
                   <FiLogIn />
                   Logout
