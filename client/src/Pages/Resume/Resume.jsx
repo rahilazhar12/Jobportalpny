@@ -72,7 +72,7 @@ const Resume = () => {
         <>
           <div className="bg-gradient-to-r from-blue-500 to-teal-500 p-6 text-white text-center">
             <div className="mb-3">
-              <img className="h-24 w-24 rounded-full mx-auto" src={`http://localhost:5000/${profileData.profilePicture}`} alt="Profile picture" />
+              <img className="h-24 w-24 rounded-full mx-auto" src={`http://localhost:8000/${profileData.profilePicture}`} alt="Profile picture" />
             </div>
             <h1 className="text-2xl font-semibold">{profileData.fname} {profileData.lname}</h1>
             <p>{new Date(profileData.dob).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })} | {profileData.age} years old | {profileData.gender}</p>
