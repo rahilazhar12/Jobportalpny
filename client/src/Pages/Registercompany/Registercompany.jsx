@@ -6,7 +6,7 @@ const Registercompany = () => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
   const onSubmit = (data) => {
-    fetch(`${URL_API}/api/v1/company/companies-register`, {
+    fetch(`${import.meta.env.VITE_API_URL}/api/v1/company/companies-register`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

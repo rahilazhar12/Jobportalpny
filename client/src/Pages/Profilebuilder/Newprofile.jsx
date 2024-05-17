@@ -489,7 +489,7 @@ const Newprofile = () => {
     
 
     try {
-      let response = await fetch(`${URL_API}/api/v1/users/profile/${id}`, {
+      let response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/users/profile/${id}`, {
         method: "POST",
         headers: {
             Authorization: `Bearer ${token}`,

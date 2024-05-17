@@ -24,7 +24,7 @@ const UserRegister = () => {
       ...(isPNYAlumni && { batchNo, courseName }) // Include batchNo and courseName only if isPNYAlumni is true
     };
   
-    let response = await fetch(`http://localhost:5000/api/v1/users/register-user`, {
+    let response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/users/register-user`, {
       method: 'POST',
       body: JSON.stringify(userDetails),
       headers: {

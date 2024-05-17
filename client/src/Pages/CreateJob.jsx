@@ -5,10 +5,6 @@ import CreatableSelect from 'react-select/creatable';
 
 const CreateJob = () => {
 
-    const [selectedOption, setSelectedOption] = useState([]);
-  
-
-
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
   const onSubmit = (data) => {
@@ -30,7 +26,7 @@ const CreateJob = () => {
     formData.append('skillsRequired', JSON.stringify(selectedOption.map(option => option.value)));
 
     // Here you would adjust the fetch API call to remove headers specifying JSON content-type
-    fetch("http://localhost:5000/api/v1/jobs/create-new-jobs", {
+    fetch(`${import.meta.env.VITE_API_URL}/api/v1/jobs/create-new-jobs`, {
         method: "POST",
         body: formData,
     })

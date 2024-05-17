@@ -1,6 +1,5 @@
 import React   from 'react'
-import { useForm } from "react-hook-form";
-import { URL_API } from "../../components/API";
+
 
 const Personal = ({ setCanProceed , onSubmit , handleSubmit , handleChange , formData }) => {
   
